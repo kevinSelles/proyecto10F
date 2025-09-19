@@ -1,0 +1,11 @@
+main {
+  min-height: 75vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  width: 100%;
+}

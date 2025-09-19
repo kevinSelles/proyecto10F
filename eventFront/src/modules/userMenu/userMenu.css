@@ -1,0 +1,21 @@
+.user-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: -7rem;
+}
+
+.user-container button {
+  font-family: "Roboto", sans-serif;
+  padding: 0.4em 0.8em;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.user-container button:hover {
+  background-color: #e0e0e0;
+}
