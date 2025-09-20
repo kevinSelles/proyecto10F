@@ -1,5 +1,8 @@
-import { getHome } from "../home/home";
 import "./main.css";
+
+import { getHome } from "../../pages/home/home";
+import { getGallery } from "../../pages/gallery/gallery";
+import { getContact } from "../../pages/contact/contact";
 
 export function getMain() {
 
@@ -23,7 +26,15 @@ export function getMain() {
       section.style.display = "none";
     } else {
       getHome(section);
-    }
+    };
+
+    if (id === "gallerySection") {
+      getGallery(section);
+    };
+
+    if (id === "contactSection") {
+      getContact(section);
+    };
 
     main.appendChild(section);
   }
