@@ -16,6 +16,7 @@ export function getNav() {
   for (const button of navButtons) {
     const btn = document.createElement("button");
     btn.textContent = button.text;
+    btn.dataset.section = button.section;
     btn.addEventListener("click", () => showSection(button.section))
     nav.appendChild(btn);
   };

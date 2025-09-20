@@ -11,11 +11,18 @@ nav button {
   font-weight: bold;
   border-radius: 8px;
   border: none;
-  background-color: #ffcc00;
+  background-color: #bb0000;
+  color: whitesmoke;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 nav button:hover {
-  background-color: #ffdd33;
+  background-color: #ff0000;
+}
+
+nav button.active {
+  background-color: #ff0000;
+  color: white;
+  border: 2px solid #000;
 }

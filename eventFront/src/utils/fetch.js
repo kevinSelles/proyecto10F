@@ -1,28 +1,22 @@
-const BASE_URL = "http://localhost:3000/api/v1";
+const url = "http://localhost:3000/api/v1";
 
-export async function apiFetch(endpoint, { method = "GET", body, headers = {} } = {}) {
+export const API = async ({ endpoint, method = "GET", body, isJSON = true }) => {
   try {
-    const options = {
+    const headers = {};
+    isJSON ? headers["Content-Type"] = "application/json" : null;
+
+    const res = await fetch(url + endpoint, { 
       method,
-      headers: {
-        "Content-Type": "application/json",
-        ...headers
-      }
-    };
+      headers,
+      body: body ? (isJSON ? JSON.stringify(body) : body) : undefined
+    });
 
-    if (body) {
-      options.body = JSON.stringify(body);
-    }
+    const response = await res.json();
 
-    const response = await fetch(`${BASE_URL}${endpoint}`, options);
-
-    if (!response.ok) {
-      throw new Error(`Error ${response.status}: ${response.statusText}`);
-    }
-
-    return await response.json();
+    return response;
   } catch (error) {
-    console.error("Fetch error:", error.message);
-    throw error;
-  }
-}
+    console.error("Fetch error", error);
+    return null;
+  };
+  
+};
