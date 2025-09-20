@@ -8,6 +8,16 @@
 }
 
 html, body {
-  background-color: rgb(255, 217, 0);
   font-family: "Roboto", sans-serif;
+  background: linear-gradient( to bottom,
+    #90e0ef 0%,
+    #caf0f8 20%,
+    #ffe066 40%,
+    #ffd60a 78%,
+    white 81%,
+    #0096c7 85%,
+    #023e8a 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
 }

@@ -3,6 +3,7 @@ import "./main.css";
 import { getHome } from "../../pages/home/home";
 import { getGallery } from "../../pages/gallery/gallery";
 import { getContact } from "../../pages/contact/contact";
+import { getRegister } from "../../pages/register/register";
 
 export function getMain() {
 
@@ -34,6 +35,10 @@ export function getMain() {
 
     if (id === "contactSection") {
       getContact(section);
+    };
+
+     if (id === "registerSection") {
+      getRegister(section);
     };
 
     main.appendChild(section);

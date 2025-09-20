@@ -4,7 +4,7 @@ import { contactFunction } from "./contactFunction";
 export function getContact(section) {
 
   const title = document.createElement("h2");
-  title.textContent = "Contacto";
+  title.textContent = "Si tienes cualquier duda o necesitas algo, escríbenos por aquí";
   title.classList.add("contact-title");
   section.appendChild(title);
 

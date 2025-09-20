@@ -4,16 +4,12 @@
 }
 
 .gallery-title {
-  font-family: "Darumadrop One", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 2rem;
   margin: 6rem auto 1rem auto;
-  color: whitesmoke;
-  text-shadow:
-    -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
+  color: #0077b6;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   max-width: 800px;
 }
 
