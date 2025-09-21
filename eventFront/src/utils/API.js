@@ -5,6 +5,9 @@ export const API = async ({ endpoint, method = "GET", body, isJSON = true }) => 
     const headers = {};
     isJSON ? headers["Content-Type"] = "application/json" : null;
 
+    const token = localStorage.getItem("token");
+    if (token) headers["Authorization"] = `Bearer ${token}`;
+
     const res = await fetch(url + endpoint, { 
       method,
       headers,

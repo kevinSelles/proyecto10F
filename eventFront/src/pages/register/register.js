@@ -1,6 +1,7 @@
 import "./register.css";
 import { API } from "../../utils/API";
 import { updateUserMenu } from "../../modules/userMenu/updateUserMenu";
+import { showSection } from "../../utils/showSections";
 
 export function getRegister(section) {
   const title = document.createElement("h2");
@@ -54,9 +55,9 @@ export function getRegister(section) {
       localStorage.setItem("user", JSON.stringify(res.user));
       
       updateUserMenu(res.user);
-      showSection("homeSection");
-
       form.reset();
+
+      showSection("homeSection");
       alert("✅ Registro completado. Bienvenido!");
     } else {
       alert("❌ Error en el registro: " + (res?.error || "Inténtalo de nuevo"));

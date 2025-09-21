@@ -4,6 +4,9 @@ import { getHome } from "../../pages/home/home";
 import { getGallery } from "../../pages/gallery/gallery";
 import { getContact } from "../../pages/contact/contact";
 import { getRegister } from "../../pages/register/register";
+import { getLogin } from "../../pages/login/login";
+import { getActivities } from "../../pages/activities/activities";
+import { getCreateActivity } from "../../pages/create/createActivity";
 
 export function getMain() {
 
@@ -16,7 +19,8 @@ export function getMain() {
     "contactSection",
     "loginSection",
     "registerSection",
-    "myActivitiesSection"
+    "myActivitiesSection",
+    "createSection"
   ];
 
   for (const id of sectionIds) {
@@ -37,9 +41,21 @@ export function getMain() {
       getContact(section);
     };
 
-     if (id === "registerSection") {
+    if (id === "registerSection") {
       getRegister(section);
     };
+
+    if (id === "loginSection") {
+      getLogin(section);
+    };
+
+    if (id === "activitiesSection") {
+      getActivities(section);
+    }
+
+     if (id === "createSection") {
+      getCreateActivity(section);
+    }
 
     main.appendChild(section);
   }

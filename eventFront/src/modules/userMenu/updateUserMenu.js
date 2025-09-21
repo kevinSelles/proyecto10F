@@ -20,7 +20,28 @@ export function updateUserMenu(user) {
       if (registerBtn) registerBtn.style.display = "inline-block";
       logoutBtn.style.display = "none";
 
+      const createBtn = document.querySelector("#createActivityBtn");
+      if (createBtn) createBtn.remove();
+
       showSection("homeSection");
     });
+  }
+
+    if (user.rol === "admin") {
+    let createBtn = document.querySelector("#createActivityBtn");
+
+    if (!createBtn) {
+      createBtn = document.createElement("button");
+      createBtn.id = "createActivityBtn";
+      createBtn.textContent = "Crear actividad";
+
+      createBtn.addEventListener("click", () => {
+        showSection("createSection");
+      });
+
+      if (logoutBtn && logoutBtn.parentNode) {
+        logoutBtn.parentNode.insertBefore(createBtn, logoutBtn);
+      }
+    }
   }
 };
