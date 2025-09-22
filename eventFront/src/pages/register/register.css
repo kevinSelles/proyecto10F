@@ -6,7 +6,6 @@
   padding: 3rem 1rem;
 }
 
-/* Caja del formulario */
 .register-form {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
@@ -16,7 +15,6 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
 
-  /* efecto playero degradado */
   background-image: linear-gradient(
     to bottom right,
     #fff7d6,
@@ -26,6 +24,7 @@
 }
 
 .register-title {
+  font-family: 'Comic Sans MS', sans-serif;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;

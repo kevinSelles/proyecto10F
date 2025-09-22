@@ -9,3 +9,7 @@ h1 {
     -2px  2px 0 black,
      2px  2px 0 black;
 }
+
+.event-title span {
+  display: block;
+}

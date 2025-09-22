@@ -3,37 +3,34 @@ import { updateUserMenu } from "../../modules/userMenu/updateUserMenu";
 import { showSection } from "../../utils/showSections";
 import { getActivities } from "../activities/activities";
 
-export function loginFunction(form) {
+export function getRegisterFunction(form, nameInput, emailInput, passwordInput) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const nameInput = form.querySelector("input[name='name']");
-    const passwordInput = form.querySelector("input[name='password']");
-
-    const credentials = {
+    const newUser = {
       userName: nameInput.value,
-      password: passwordInput.value
+      password: passwordInput.value,
+      email: emailInput.value,
     };
 
     const res = await API({
-      endpoint: "/users/login",
+      endpoint: "/users/register",
       method: "POST",
-      body: credentials
+      body: newUser
     });
 
     if (res?.token) {
       localStorage.setItem("token", res.token);
       localStorage.setItem("user", JSON.stringify(res.user));
-
+      
       updateUserMenu(res.user);
       form.reset();
+
       showSection("homeSection");
-
       getActivities(document.getElementById("activitiesSection"));
-
-      alert("✅ Sesión iniciada correctamente. Bienvenido!");
+      alert("✅ Registro completado. Bienvenido!");
     } else {
-      alert("❌ Error en el login: " + (res?.error || "Inténtalo de nuevo"));
+      alert("❌ Error en el registro: " + (res?.error || "Inténtalo de nuevo"));
     }
   });
-};
+}

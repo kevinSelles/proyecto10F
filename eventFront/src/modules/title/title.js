@@ -11,9 +11,6 @@ export function getTitle() {
   const line2 = document.createElement("span");
   line2.textContent = "¡El evento más divertido del verano!";
 
-  line1.style.display = "block";
-  line2.style.display = "block";
-
   title.append(line1, line2);
 
   return title;

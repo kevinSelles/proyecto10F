@@ -1,0 +1,4 @@
+#myActivitiesSection {
+  display: flex;
+  flex-direction: column;
+}

@@ -5,7 +5,9 @@ import { getUserMenu } from './modules/userMenu/userMenu';
 import { getNav } from './modules/nav/nav';
 import { getTitle } from './modules/title/title';
 import { getMain } from './modules/main/main';
+import { getFooter } from './modules/footer/footer';
 import { autoLogin } from './utils/autoLogin';
+
 
 
 const header = getHeader();
@@ -13,6 +15,7 @@ const title = getTitle();
 const userMenu = getUserMenu();
 const nav = getNav();
 const main = getMain();
+const footer = getFooter();
 
 header.appendChild(title);
 header.appendChild(userMenu);
@@ -20,5 +23,6 @@ header.appendChild(userMenu);
 document.body.prepend(header);
 document.body.appendChild(nav);
 document.body.appendChild(main);
+document.body.appendChild(footer);
 
 autoLogin();

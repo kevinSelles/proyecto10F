@@ -1,47 +1,51 @@
 import { showSection } from "../../utils/showSections";
 
 export function updateUserMenu(user) {
-
   const loginBtn = document.querySelector("#loginBtn");
   const registerBtn = document.querySelector("#registerBtn");
   const logoutBtn = document.querySelector("#logoutBtn");
+  const myActivitiesBtn = document.querySelector("#myActivitiesBtn");
 
-  if (loginBtn) loginBtn.style.display = "none";
-  if (registerBtn) registerBtn.style.display = "none";
+  const buttons = [
+    { element: loginBtn, display: user ? "none" : "inline-block" },
+    { element: registerBtn, display: user ? "none" : "inline-block" },
+    { element: logoutBtn, display: user ? "inline-block" : "none" },
+    { element: myActivitiesBtn, display: user && user.rol === "user" ? "inline-block" : "none" }
+  ];
 
-  if (logoutBtn) {
-    logoutBtn.style.display = "inline-block";
+  for (const button of buttons) {
+    if (button.element) {
+      button.element.style.display = button.display;
+    }
+  };
 
-    logoutBtn.addEventListener("click", () => {
-      localStorage.removeItem("token");
-      localStorage.removeItem("user");
+  if (!user) {
+    const createBtn = document.querySelector("#createActivityBtn");
+    if (createBtn) createBtn.remove();
+    return;
+  };
 
-      if (loginBtn) loginBtn.style.display = "inline-block";
-      if (registerBtn) registerBtn.style.display = "inline-block";
-      logoutBtn.style.display = "none";
-
-      const createBtn = document.querySelector("#createActivityBtn");
-      if (createBtn) createBtn.remove();
-
-      showSection("homeSection");
-    });
-  }
-
-    if (user.rol === "admin") {
+  if (user.rol === "admin") {
     let createBtn = document.querySelector("#createActivityBtn");
-
     if (!createBtn) {
       createBtn = document.createElement("button");
       createBtn.id = "createActivityBtn";
       createBtn.textContent = "Crear actividad";
-
       createBtn.addEventListener("click", () => {
         showSection("createSection");
       });
-
       if (logoutBtn && logoutBtn.parentNode) {
         logoutBtn.parentNode.insertBefore(createBtn, logoutBtn);
       }
-    }
-  }
+    };
+  };
+
+  if (logoutBtn) {
+    logoutBtn.onclick = () => {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      updateUserMenu(null);
+      showSection("homeSection");
+    };
+  };
 };
