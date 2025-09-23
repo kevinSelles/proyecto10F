@@ -4,32 +4,32 @@
 }
 
 .contact-title {
-  font-family: 'Comic Sans MS', sans-serif;
+  font-family: var(--font-section);
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #0077b6;
+  margin-bottom: var(--size-medium);
+  color: var(--second-color);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  padding: 0 2rem;
+  padding: 0 var(--size-large);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--size-medium);
   max-width: 700px;
   margin: 0 auto;
   padding: 2.5rem;
   background: linear-gradient(135deg, #caf0f8, #90e0ef);
-  border-radius: 1.5rem;
+  border-radius: var(--size-medium);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 1.2rem 1.5rem;
+  padding: 1.2rem var(--size-medium);
   border: 2px solid #00b4d8;
-  border-radius: 1rem;
+  border-radius: var(--size-small);
   font-size: 1.2rem;
   outline: none;
   transition: 0.3s;
@@ -37,18 +37,18 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #0077b6;
+  border-color: var(--second-color);
   box-shadow: 0 0 10px rgba(0, 119, 182, 0.4);
 }
 
 .contact-form button {
-  padding: 1rem;
+  padding: var(--size-small);
   background: #ffdd00;
   border: none;
-  border-radius: 1rem;
+  border-radius: var(--size-small);
   font-size: 1.1rem;
   font-weight: bold;
-  color: #333;
+  color: var(--third-color);
   cursor: pointer;
   transition: 0.3s
 }
@@ -61,14 +61,14 @@
 @media (max-width: 758px) {
 
 .contact-title {
-font-size: 2rem;
+font-size: var(--size-large);
 }
 }
 
 @media (max-width: 619px) {
 
 .contact-title {
-font-size: 1.5rem;
+font-size: var(--size-medium);
 }
 }
 

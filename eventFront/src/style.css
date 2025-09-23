@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+  --first-color: whitesmoke;
+  --second-color: #0077b6;
+  --third-color: #333;
+  --background-color: linear-gradient( to bottom,
+    #90e0ef 0%,
+    #caf0f8 20%,
+    #ffe066 40%,
+    #ffd60a 78%,
+    white 81%,
+    #0096c7 85%,
+    #023e8a 100%
+  );;
+
+  --size-large: 2rem;
+  --size-medium: 1.5rem;
+  --size-small: 1rem;
+
+  --font-section: 'Comic Sans MS', sans-serif;
+  --font-default: roboto, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,16 +31,8 @@
 }
 
 html, body {
-  font-family: "Roboto", sans-serif;
-  background: linear-gradient( to bottom,
-    #90e0ef 0%,
-    #caf0f8 20%,
-    #ffe066 40%,
-    #ffd60a 78%,
-    white 81%,
-    #0096c7 85%,
-    #023e8a 100%
-  );
+  font-family: var(--font-default);
+  background: var(--background-color);
   background-attachment: fixed;
   min-height: 100vh;
   display: flex;

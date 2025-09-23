@@ -1,22 +1,22 @@
 footer {
   height: 5vh;
   width: 100%;
-  margin: 1rem 0;
+  margin: var(--size-small) 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .footer-info {
-  font-family: 'Comic Sans MS', sans-serif;
-  color: whitesmoke;
-  padding: 0 2rem;
+  font-family: var(--font-section);
+  color: var(--first-color);
+  padding: 0 var(--size-large);
   font-size: 1.3rem;
   text-align: center;
 }
 
 footer a {
-  color: whitesmoke;
+  color: var(--first-color);
   position: relative;
   font-weight: bold;
 }
@@ -28,7 +28,7 @@ footer a::after {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: whitesmoke;
+  background-color: var(--first-color);
   transition: width 0.3s ease;
 }
 
@@ -46,8 +46,8 @@ footer a:hover::after {
 @media (max-width: 668px) {
 
   .footer-info {
-    font-size: 1rem;
-    padding: 0 1rem;
+    font-size: var(--size-small);
+    padding: 0 var(--size-small);
   }
 }
 

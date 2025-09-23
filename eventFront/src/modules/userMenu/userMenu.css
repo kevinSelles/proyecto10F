@@ -6,7 +6,7 @@
 }
 
 .user-container button {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-default);
   padding: 0.5em 1em;
   font-size: 0.9rem;
   border: none;
@@ -40,7 +40,7 @@
 
 .user-container {
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: var(--size-small);
 }
 }
 

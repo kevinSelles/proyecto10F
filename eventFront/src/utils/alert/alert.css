@@ -13,7 +13,7 @@
 }
 
 .alert-content {
-  background: white;
+  background: var(--first-color);
   padding: 20px 30px;
   border-radius: 10px;
   text-align: center;
@@ -22,9 +22,9 @@
 #alertClose {
   margin-top: 15px;
   padding: 6px 12px;
-  background: #0077b6;
+  background: var(--second-color);
   border: none;
   border-radius: 6px;
-  color: white;
+  color: var(--first-color);
   cursor: pointer;
 }

@@ -2,7 +2,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   height: 5vh;
-  margin: 1rem 0;
+  margin: var(--size-small) 0;
 }
 
 nav button {
