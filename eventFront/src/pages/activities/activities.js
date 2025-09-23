@@ -1,7 +1,7 @@
 import "./activities.css";
 import { API } from "../../utils/API";
 import { createActivityCard } from "./createActivityCard";
-import { createUserButtons } from "./CreateUserButtons.js";
+import { createUserButtons } from "./createUserButtons.js";
 import { createAdminButtons } from "./createAdminButtons.js";
 
 export async function getActivities(section, onlyUserActivities = false) {
