@@ -1,0 +1,23 @@
+#customLoading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+}
+
+#customLoading.hidden {
+  display: none;
+}
+
+.loading-animation {
+  width: 100px;
+  height: 100px;
+  border-top: 20px solid #0077b6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

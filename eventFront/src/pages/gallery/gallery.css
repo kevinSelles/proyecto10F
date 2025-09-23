@@ -7,7 +7,7 @@
   font-family: 'Comic Sans MS', sans-serif;
   text-align: center;
   font-size: 2rem;
-  margin: 6rem auto 1rem auto;
+  padding: 1rem 3rem;
   color: #0077b6;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   max-width: 800px;
@@ -95,4 +95,27 @@
 
 .gallery-nav.next {
   right: 0;
+}
+
+@media (max-width: 707px) {
+
+.gallery-title {
+  font-size: 1.5rem;
+}
+}
+
+@media (max-width: 557px) {
+
+.gallery-title {
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+}
+}
+
+@media (max-width: 415px) {
+
+.gallery-title {
+  font-size: 1.1rem;
+  padding: 1rem;
+}
 }

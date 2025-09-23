@@ -33,7 +33,7 @@ export function loginFunction(form) {
 
       alert("✅ Sesión iniciada correctamente. Bienvenido!");
     } else {
-      alert("❌ Error en el login: " + (res?.error || "Inténtalo de nuevo"));
+      alert("❌ Usuario o contraseña incorrecto, inténtelo de nuevo");
     }
   });
 };

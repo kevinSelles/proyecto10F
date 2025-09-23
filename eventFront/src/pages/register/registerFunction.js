@@ -30,7 +30,7 @@ export function getRegisterFunction(form, nameInput, emailInput, passwordInput) 
       getActivities(document.getElementById("activitiesSection"));
       alert("✅ Registro completado. Bienvenido!");
     } else {
-      alert("❌ Error en el registro: " + (res?.error || "Inténtalo de nuevo"));
+      alert("❌ Error en el registro, inténtalo de nuevo");
     }
   });
 }

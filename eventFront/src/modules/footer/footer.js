@@ -6,7 +6,7 @@ export function getFooter() {
   
   const footerInfo = document.createElement("p");
   footerInfo.classList.add("footer-info");
-  footerInfo.textContent = "Este es un evento ficticio, creado como proyecto académico por el estudiante Kevin Selles. Si te ha gustado, te invito a visitar ";
+  footerInfo.textContent = "Evento ficticio creado como proyecto académico por el estudiante Kevin Selles. Te invito a visitar ";
 
   const footerLink = document.createElement("a");
   footerLink.href = "https://kevinselles.netlify.app";

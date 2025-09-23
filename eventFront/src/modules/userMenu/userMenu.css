@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-end;
   gap: 0.7rem;
-  margin-top: -7rem;
+  margin-top: -130px;
 }
 
 .user-container button {
@@ -27,4 +27,80 @@
 .user-container button:active {
   transform: translateY(0);
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 810px) {
+
+.user-container {
+  margin-top: -5rem;
+}
+}
+
+@media (max-width: 685px) {
+
+.user-container {
+  flex-direction: column;
+  margin-top: 1rem;
+}
+}
+
+@media (max-height: 890px) {
+
+.user-container {
+  margin-top: -100px;
+}
+}
+
+@media (max-height: 750px) {
+
+.user-container {
+  margin-top: -80px;
+}
+}
+
+@media (max-height: 645px) {
+
+.user-container {
+  margin-top: -60px;
+}
+}
+
+@media (max-width: 819px) and (max-height: 645px) {
+
+.user-container {
+  margin-top: -30px;
+}
+}
+
+@media (max-width: 540px) and (max-height: 720px) {
+
+.user-container {
+  margin-top: 30px;
+}
+
+.user-container button {
+    padding: 0.3em 0.6em;
+  font-size: 0.8rem;
+}
+}
+
+@media (max-width: 390px) and (max-height: 844px) {
+
+.user-container {
+  margin-top: 10px;
+}
+}
+
+@media (max-width: 344px) and (max-height: 882px) {
+
+.user-container {
+  margin-top: 10px;
+}
+}
+
+@media (max-width: 667px) and (max-height: 375px) {
+
+.user-container {
+  margin-top: 10px;
+}
 }

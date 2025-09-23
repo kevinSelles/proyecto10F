@@ -57,3 +57,38 @@
   background: #c8ff00;
   transform: scale(1.05);
 }
+
+@media (max-width: 758px) {
+
+.contact-title {
+font-size: 2rem;
+}
+}
+
+@media (max-width: 619px) {
+
+.contact-title {
+font-size: 1.5rem;
+}
+}
+
+@media (max-width: 480px) {
+
+.contact-title {
+font-size: 1.2rem;
+}
+}
+
+@media (max-width: 400px) {
+
+.contact-form {
+max-width: 350px;
+}
+}
+
+@media (max-width: 370px) {
+
+.contact-form {
+max-width: 310px;
+}
+}

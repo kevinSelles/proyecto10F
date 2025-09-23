@@ -13,3 +13,45 @@ header {
   max-width: 300px;
   align-self: flex-start;
 }
+
+@media (max-width: 810px) {
+
+  header {
+    height: 16vh;
+  }
+}
+
+@media (max-width: 552px) {
+
+  header {
+height: 13vh
+}
+}
+
+@media (max-width: 335px) {
+
+  .logo {
+    height: 95%;
+  }
+}
+
+@media (max-height: 600px) {
+
+  header {
+    height: 25vh;
+  }
+}
+
+@media (max-height: 420px) {
+
+  header {
+    height: 30vh;
+  }
+}
+
+@media (max-width: 932px) and (max-height: 430px) {
+
+header {
+  height: 30vh;
+}
+}

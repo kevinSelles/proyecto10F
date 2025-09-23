@@ -1,0 +1,30 @@
+#customAlert {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+#customAlert.hidden {
+  display: none;
+}
+
+.alert-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#alertClose {
+  margin-top: 15px;
+  padding: 6px 12px;
+  background: #0077b6;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}

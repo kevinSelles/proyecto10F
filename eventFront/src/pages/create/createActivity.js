@@ -45,7 +45,7 @@ export function getCreateActivity(section) {
       clearEditing();
       getActivities(document.getElementById("activitiesSection"));
     } else {
-      alert("❌ Error: " + (res?.error || "Inténtalo de nuevo"));
+      alert("❌ Error: Inténtalo de nuevo");
     }
   });
 }

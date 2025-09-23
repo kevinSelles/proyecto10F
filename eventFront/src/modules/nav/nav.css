@@ -2,6 +2,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   height: 5vh;
+  margin: 1rem 0;
 }
 
 nav button {
@@ -25,4 +26,53 @@ nav button.active {
   background-color: #ff0000;
   color: white;
   border: 2px solid #000;
+}
+
+@media (max-width: 565px) {
+
+  nav button {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 471px) {
+
+  nav button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+
+  nav button {
+    padding: 0 0.7em;
+  }
+}
+
+@media (max-width: 350px) {
+
+  nav button {
+    padding: 0 0.6em;
+  }
+}
+
+@media (max-height: 720px) {
+
+  nav {
+    height: 7vh;
+  }
+}
+
+@media (max-height: 500px) {
+
+  nav {
+    height: 9vh;
+  }
+}
+
+@media (max-height: 400px) {
+
+  nav {
+    height: 10vh;
+  }
 }

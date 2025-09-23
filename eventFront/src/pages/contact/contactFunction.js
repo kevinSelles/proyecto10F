@@ -23,7 +23,7 @@ export function contactFunction(form, nameInput, emailInput, messageInput) {
         alert("✅ Tu mensaje se envió correctamente");
         form.reset();
       } else {
-        alert("❌ Error: " + data.error);
+        alert("❌ Error: Alguno de los campos es erroneo o está en blanco" + data.error);
       }
     } catch (err) {
       console.error("Error enviando formulario:", err);

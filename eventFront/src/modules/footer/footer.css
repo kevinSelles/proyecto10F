@@ -1,7 +1,7 @@
 footer {
   height: 5vh;
   width: 100%;
-  margin-top: 1rem;
+  margin: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,4 +34,33 @@ footer a::after {
 
 footer a:hover::after {
   width: 100%;
+}
+
+@media (max-width: 775px) {
+
+  .footer-info {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 668px) {
+
+  .footer-info {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 615px) {
+
+  footer {
+    height: 7vh;
+  }
+}
+
+@media (max-width: 410px) {
+
+  footer {
+    height: 9vh;
+  }
 }
