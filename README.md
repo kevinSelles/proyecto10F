@@ -4,7 +4,7 @@ En este proyecto hago una web con back y front simulando la organización de un 
 La web incluye registro y login de usuarios, galería de fotos, panel de actividades con botones para apuntarse y listas
 de usuarios apuntados. Funciones para los admin como publicar actividades nuevas, modificar las existentes... Además de
 un formulario de contacto totalmente funcional.
-La web es totalmente responsive, adaptndose a monitores, tablets y móviles.
+La web es totalmente responsive, adaptandose a monitores, tablets y móviles.
 
 *Nota: El evento no es real. La web es un proyecto académico y las imágenes de personas realizando actividades son 
 ejemplos ficticios.
