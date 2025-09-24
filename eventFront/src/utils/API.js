@@ -1,4 +1,4 @@
-const url = "https://splish-splash-back.vercel.app/api/";
+const url = "https://splish-splash-back.vercel.app/api/v1/";
 
 export const API = async ({ endpoint, method = "GET", body, isJSON = true }) => {
   try {
