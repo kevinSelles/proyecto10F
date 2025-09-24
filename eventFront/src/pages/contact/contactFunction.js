@@ -9,7 +9,7 @@ export function contactFunction(form, nameInput, emailInput, messageInput) {
     };
 
     try {
-      const res = await fetch("/api/v1/contact", {
+      const res = await fetch("https://splish-splash-back.vercel.app/api/v1/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
