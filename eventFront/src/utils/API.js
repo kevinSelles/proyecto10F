@@ -1,4 +1,6 @@
-const url = "https://splish-splash-back.vercel.app/api/v1/";
+const LOCAL = "http://localhost:3000/api/v1";
+const PROD = "https://splish-splash-back.vercel.app/api/v1";
+const url = import.meta.env.DEV ? LOCAL : PROD;
 
 export const API = async ({ endpoint, method = "GET", body, isJSON = true }) => {
   try {
