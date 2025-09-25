@@ -46,8 +46,7 @@ export function updateUserMenu(user) {
     logoutBtn.addEventListener("click", () => {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
-      updateUserMenu(null);
-      showSection("homeSection");
+      location.reload();
     });
   };
 };
