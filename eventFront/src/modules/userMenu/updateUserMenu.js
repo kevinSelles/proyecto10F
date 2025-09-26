@@ -43,10 +43,10 @@ export function updateUserMenu(user) {
   const logout = document.getElementById("logoutBtn");
 
   if (logoutBtn) {
-    logoutBtn.addEventListener("click", () => { 
+    logoutBtn.onclick = () => {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
       location.reload();
-    });
+    };
   };
 };
