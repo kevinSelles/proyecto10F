@@ -3,6 +3,7 @@ const PROD = "https://splish-splash-back.vercel.app/api/v1";
 const url = import.meta.env.DEV ? LOCAL : PROD;
 
 export const API = async ({ endpoint, method = "GET", body, isJSON = true }) => {
+  window.showLoading();
   try {
     const headers = {};
     isJSON ? headers["Content-Type"] = "application/json" : null;
@@ -22,6 +23,8 @@ export const API = async ({ endpoint, method = "GET", body, isJSON = true }) => 
   } catch (error) {
     console.error("Fetch error", error);
     return null;
+  } finally {
+    window.hideLoading();
   };
   
 };
