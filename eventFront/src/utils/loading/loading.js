@@ -1,5 +1,8 @@
 import "./loading.css";
 
+const LOADING_DURATION = 1000;
+let loadingTimeout = null;
+
 export function initLoading() {
   const loading = document.createElement("div");
   loading.id = "customLoading";
@@ -18,4 +21,18 @@ export function initLoading() {
   window.hideLoading = () => {
     loading.classList.add("hidden");
   };
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("button");
+    if (!btn) return;
+
+    window.showLoading();
+
+    if (loadingTimeout) clearTimeout(loadingTimeout);
+
+    loadingTimeout = setTimeout(() => {
+      window.hideLoading();
+      loadingTimeout = null;
+    }, LOADING_DURATION);
+  });
 }
