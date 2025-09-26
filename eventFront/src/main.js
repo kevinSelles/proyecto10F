@@ -25,9 +25,12 @@ document.body.appendChild(nav);
 document.body.appendChild(main);
 document.body.appendChild(footer);
 
-initLoading();
-customAlert();
-autoLogin();
+async function startApp() {
+  initLoading();
+  customAlert();
+  await autoLogin();
+  showLoading();
+  setTimeout(() => hideLoading(), 2000);
+}
 
-showLoading();
-setTimeout(() => hideLoading(), 2000);
+startApp();
