@@ -7,7 +7,7 @@ export function getNav() {
   const nav = document.createElement("nav");
 
   const navButtons = [
-    {text: "Home", section: "homeSection"}, 
+    {text: "Inicio", section: "homeSection"}, 
     {text: "Actividades", section: "activitiesSection"}, 
     {text: "Galería", section: "gallerySection"}, 
     {text: "Contacto", section: "contactSection"}
