@@ -22,7 +22,7 @@ export async function getActivities(section, onlyUserActivities = false) {
     try {
       user = await API({ endpoint: `/users/${storedUser._id}`, method: "GET" });
     } catch (err) {
-      console.warn("No se pudo cargar el usuario:", err);
+      console.error("No se pudo cargar el usuario:", err);
       user = null;
     }
   }
@@ -32,7 +32,7 @@ export async function getActivities(section, onlyUserActivities = false) {
     activities = await API({ endpoint: "/activities" });
     if (!Array.isArray(activities)) activities = [];
   } catch (err) {
-    console.warn("No se pudieron cargar las actividades:", err);
+    console.error("No se pudieron cargar las actividades:", err);
     activities = [];
   }
 
