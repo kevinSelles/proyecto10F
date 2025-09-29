@@ -10,7 +10,7 @@ export function getUserMenu() {
   userContainer.classList.add("user-container");
 
   const loginButon = document.createElement("button");
-  loginButon.textContent = "Login";
+  loginButon.textContent = "Iniciar sesión";
   loginButon.id = "loginBtn";
   loginButon.addEventListener("click", () => showSection("loginSection"));
 
